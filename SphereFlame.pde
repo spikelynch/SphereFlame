@@ -69,7 +69,7 @@ void setup() {
   cbar = new Colours(colours, color(40, 40, 120, 120), color(255, 255, 255, 120));
   //recolour();
 
-  ad = new AffDrawer(10, int(H * 0.8), cbar);
+  ad = new AffDrawer(3, int(H * 0.8), cbar);
   
   aff = new Afflower(2, ad);
 
@@ -99,7 +99,7 @@ void draw() {
   translate(xoff, yoff, -zoff); 
   rotateX(PI * tick * xrot);
   rotateY(PI * tick * yrot);
-  //  axes();
+  axes();
   aff.render(radius, depth);
   popMatrix();
   tick++;

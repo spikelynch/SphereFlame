@@ -13,7 +13,7 @@ class AffTrans {
     void apply(float radius) {
 	   rotateZ(PI * twist / 180);
 	   rotateY(PI * dip / 180);
-	   scale(scale, scale, scale);
+	   //scale(scale, scale, scale);
     }	
 
 }
