@@ -2,6 +2,12 @@
 
 An analogue of IFS or flame fractals, which use repeated affine mappings to create self-similar structures. This uses repeated rotations to map points on the surface of a sphere.
 
+![A red, green and yellow fractal on a black background](https://etc.mikelynch.org/SphereFlame/frame-0780.png)
+
+![A blue fractal on a cyan background](https://etc.mikelynch.org/SphereFlame/frame-0583.png)
+
+![A peach fractal on a purple background](https://etc.mikelynch.org/SphereFlame/frame-0258.png)
+
 It's a Processing sketch I first put together years ago and am overhauling to work with P3 and have a nice user interface. The current UX is rubbish:
 
 * drag with left or right mouse button click to shift the fractal transforms
