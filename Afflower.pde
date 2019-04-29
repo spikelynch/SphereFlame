@@ -12,18 +12,18 @@ class Afflower {
 		renderer = r;
     }
 
-    void trans(float d, float t, float s) {
-		trans[i0] = new AffTrans(d, t, s);
+    void trans(float d, float t, float s, float ts) {
+		trans[i0] = new AffTrans(d, t, s, ts);
 		i0++;
     }
 
-    void render(float radius, int depth) {
+    void render(float radius, float scale, int depth) {
 		renderer.draw(depth, radius);
 		if( depth > 0 ) {
 	    	for( int i = 0; i < n; i++ ) {
 				pushMatrix();
-				trans[i].apply(radius);
-				this.render(radius * trans[i].scale, depth - 1);
+				trans[i].apply(radius, scale);
+				this.render(radius * trans[i].scale, scale * trans[i].thscale, depth - 1);
 				popMatrix();
 	    	}
 		} else {

@@ -23,7 +23,6 @@ class AffDrawer {
 		strokeWeight(w);
 		stroke(col.nextlerp());
 		stroke(col.lerp(depth));
-	//println("depth" + depth);
 		point(0, 0, 0);
 		popMatrix();
     }
