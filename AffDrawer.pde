@@ -20,7 +20,7 @@ class AffDrawer {
     void dot(int depth, float size) {
 		pushMatrix();
 		translate(0, 0, radius);
-		strokeWeight(w);
+		strokeWeight(w * depth);
 		stroke(col.nextlerp());
 		stroke(col.lerp(depth));
 		point(0, 0, 0);
