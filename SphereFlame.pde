@@ -9,8 +9,8 @@ import controlP5.*;
 // controls to set the colours
 // why are the control colours cycling like that?
 
-Afflower aff;
-AffDrawer ad;
+SphereFractal sf;
+SphereRenderer sd;
 
 TrackBall tb;
 
@@ -90,12 +90,12 @@ void setup() {
   cbar = new Colours(colours, color(255,192,192,90), color(96,192,240,90));
   //recolour();
 
-  ad = new AffDrawer(4, int(H * 0.8), cbar);
+  sd = new SphereRenderer(4, int(H * 0.8), cbar);
   
-  aff = new Afflower(2, ad);
+  sf = new SphereFractal(2);
 
-  aff.trans(0, 0, 1, 1.0);
-  aff.trans(0, 0, 0.9, 1.2);
+  sf.trans(0, 0, 1, 1.0);
+  sf.trans(0, 0, 0.9, 1.2);
 
   
   tb = new TrackBall();
@@ -173,18 +173,18 @@ void draw() {
   translate(xoff, yoff, -zoff); 
   applyMatrix(tb.rotationMat);
   axes();
-  aff.render(radius, 1.0, depth);
+  sf.render(sd, radius, 1.0, depth);
   popMatrix();
   tick++;
 
-  aff.trans[0].dip = c1d * K;
-  aff.trans[0].twist = c1t * K ;
-  aff.trans[0].scale = c1r;
-  aff.trans[0].thscale = c1s;
-  aff.trans[1].dip = c2d * K;
-  aff.trans[1].twist = c2t * K;
-  aff.trans[1].scale = c2r;
-  aff.trans[1].thscale = c2s;
+  sf.trans[0].dip = c1d * K;
+  sf.trans[0].twist = c1t * K ;
+  sf.trans[0].scale = c1r;
+  sf.trans[0].thscale = c1s;
+  sf.trans[1].dip = c2d * K;
+  sf.trans[1].twist = c2t * K;
+  sf.trans[1].scale = c2r;
+  sf.trans[1].thscale = c2s;
 }
 
 void mouseDragged() {

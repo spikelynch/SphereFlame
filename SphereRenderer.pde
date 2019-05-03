@@ -1,13 +1,13 @@
 
 
-class AffDrawer {
+class SphereRenderer {
 
     int w;
     Colours col; 
     int radius;
     int style;
 
-    AffDrawer(int w0, int r0, Colours c0) {
+    SphereRenderer(int w0, int r0, Colours c0) {
 		w = w0;
 		col = c0;
 		radius = r0;

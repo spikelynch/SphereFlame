@@ -3,14 +3,14 @@
 // also to do - can we make the rotations smaller or larger with
 // each iteration?
 
-class AffTrans {
+class SphereTrans {
     
     float dip;
     float twist;
     float scale;
     float thscale;
 
-    AffTrans(float d, float t, float s, float ts) {
+    SphereTrans(float d, float t, float s, float ts) {
 	   dip = d;
 	   twist = t;
 	   scale = s;
